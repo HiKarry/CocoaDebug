@@ -28,12 +28,15 @@ class CocoaDebugTabBarController: UITabBarController {
         super.viewWillAppear(animated)
         
         CocoaDebugSettings.shared.visible = true
+        UIApplication.shared.statusBarStyle = .lightContent;
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         CocoaDebugSettings.shared.visible = false
+        UIApplication.shared.statusBarStyle = .default;
     }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         _WindowHelper.shared.displayedList = false
