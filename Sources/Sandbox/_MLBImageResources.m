@@ -29,6 +29,12 @@
 //    NSString *imagePath = [bundle pathForResource:imageName ofType:fileType inDirectory:directory];
 //    UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
     
+    //如果有动态库，就从动态库里读图片
+    NSString *frameworkPath = [[bundle bundlePath] stringByAppendingPathComponent:@"Frameworks/CocoaDebug.framework"];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:frameworkPath]) {
+        imageName = [NSString stringWithFormat:@"Frameworks/CocoaDebug.framework/%@", imageName];
+    }
+
     /* 自己判断 */
     // 先找到全部分辨率的图片地址
     NSString *x1ImagePath = [bundle pathForResource:[self imageName:imageName appendingScale:1] ofType:fileType inDirectory:directory];
