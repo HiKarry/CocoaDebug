@@ -25,7 +25,7 @@ import Foundation
     ///set the initial recipients to include in the email’s “Cc” field when share via email. default value is `nil`.
     @objc public static var emailCcRecipients: [String]? = nil
     ///set the main color with hexadecimal format. default value is `#42d459`.
-    @objc public static var mainColor: String = "#42d459"
+    @objc public static var mainColor: String = "#ffffff"
     
     //MARK: - CocoaDebug enable
     @objc public static func enable() {
