@@ -8,7 +8,10 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+
+#if DEBUG
 @import CocoaDebug;
+#endif
 
 @interface AppDelegate ()
 
@@ -33,9 +36,12 @@
     NSLog(@"===%@", @"jdskfdjs");
     NSLog(@"===%@", @"jdskfdjs");
     // Override point for customization after application launch.
+    
+#if DEBUG
     CocoaDebug.serverURL = @"http://www.baidu.com";
     CocoaDebug.ignoredURLs = @[@"mob.com"];
     [CocoaDebug enable];
+#endif
     
     return YES;
 }

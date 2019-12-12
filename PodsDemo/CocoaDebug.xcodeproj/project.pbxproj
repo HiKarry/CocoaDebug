@@ -14,12 +14,12 @@
 		C58B98DD2397564500AC0644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58B98DB2397564500AC0644 /* LaunchScreen.storyboard */; };
 		C58B98E02397564500AC0644 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C58B98DF2397564500AC0644 /* main.m */; };
 		C58B98E8239781EC00AC0644 /* CocoaDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58B98E7239781EC00AC0644 /* CocoaDebug.swift */; };
-		D1E21FBD9CBFD6E584A6AD75 /* Pods_CocoaDebug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2158EE9F7B3797B97F347D7E /* Pods_CocoaDebug.framework */; };
+		C9B265D0E6AE77FCF885686F /* Pods_CocoaDebug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32492297E0EBF5BB9CD4227B /* Pods_CocoaDebug.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0662C373CA70EA40E7EA7CEE /* Pods-CocoaDebug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaDebug.release.xcconfig"; path = "Target Support Files/Pods-CocoaDebug/Pods-CocoaDebug.release.xcconfig"; sourceTree = "<group>"; };
-		2158EE9F7B3797B97F347D7E /* Pods_CocoaDebug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocoaDebug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32492297E0EBF5BB9CD4227B /* Pods_CocoaDebug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocoaDebug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58B98CA2397564300AC0644 /* CocoaDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58B98CD2397564300AC0644 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C58B98CE2397564300AC0644 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1E21FBD9CBFD6E584A6AD75 /* Pods_CocoaDebug.framework in Frameworks */,
+				C9B265D0E6AE77FCF885686F /* Pods_CocoaDebug.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,7 +50,7 @@
 		02362DF1D91B7C50ED868BA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2158EE9F7B3797B97F347D7E /* Pods_CocoaDebug.framework */,
+				32492297E0EBF5BB9CD4227B /* Pods_CocoaDebug.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -111,7 +111,7 @@
 				C58B98C62397564300AC0644 /* Sources */,
 				C58B98C72397564300AC0644 /* Frameworks */,
 				C58B98C82397564300AC0644 /* Resources */,
-				3D6FEF6A4B6B89E78CB97F13 /* [CP] Embed Pods Frameworks */,
+				061D8D566B93AE7322FB02C4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,7 +169,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3D6FEF6A4B6B89E78CB97F13 /* [CP] Embed Pods Frameworks */ = {
+		061D8D566B93AE7322FB02C4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -361,6 +361,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WML88BTVE8;
 				INFOPLIST_FILE = CocoaDebug/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -383,6 +384,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3LDQYFCPWX;
 				INFOPLIST_FILE = CocoaDebug/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

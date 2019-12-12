@@ -2,21 +2,21 @@ PODS:
   - CocoaDebug (1.0.2)
 
 DEPENDENCIES:
-  - CocoaDebug (from `https://github.com/HiKarry/CocoaDebug.git`, tag `2.0.0`)
+  - CocoaDebug (from `https://github.com/HiKarry/CocoaDebug.git`, tag `2.0.1`)
 
 EXTERNAL SOURCES:
   CocoaDebug:
     :git: https://github.com/HiKarry/CocoaDebug.git
-    :tag: 2.0.0
+    :tag: 2.0.1
 
 CHECKOUT OPTIONS:
   CocoaDebug:
     :git: https://github.com/HiKarry/CocoaDebug.git
-    :tag: 2.0.0
+    :tag: 2.0.1
 
 SPEC CHECKSUMS:
   CocoaDebug: be736e3a5c51dc98c03640ba0e972322ad83f99b
 
-PODFILE CHECKSUM: eccbb39fd57478e800f3270d27b74f927d7766ed
+PODFILE CHECKSUM: 407474be4c2bdea839d3e777fdde68c0db01c4f9
 
 COCOAPODS: 1.8.4
