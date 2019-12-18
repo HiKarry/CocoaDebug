@@ -65,6 +65,36 @@ NSInteger const kMLBDeleteSelectedAlertViewTag = 121; // Toolbar Delete
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)customNavigationBarPlus
+{
+    //****** 以下代码从LogNavigationViewController.swift复制 ******
+    self.navigationController.navigationBar.translucent = NO;
+    
+    self.navigationController.navigationBar.tintColor = [_NetworkHelper shared].mainColor;
+    self.navigationController.navigationBar.titleTextAttributes = @{
+        NSFontAttributeName:[UIFont boldSystemFontOfSize:20],
+        NSForegroundColorAttributeName: [_NetworkHelper shared].mainColor
+    };
+    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"_back_arrow" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil] style:UIBarButtonItemStyleDone target:self action:@selector(pop)];
+    backItem.tintColor = [_NetworkHelper shared].mainColor;
+
+    UIBarButtonItem *closeItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(popToRootDirectory)];
+    closeItem.tintColor = [_NetworkHelper shared].mainColor;
+    
+    self.navigationItem.leftBarButtonItems = @[backItem, closeItem];
+}
+
+- (void)pop
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)popToRootDirectory
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 #pragma mark - View Lifecycle
 
 - (void)viewDidLoad {
@@ -85,6 +115,7 @@ NSInteger const kMLBDeleteSelectedAlertViewTag = 121; // Toolbar Delete
             [self customNavigationBar];//liman
             self.title = @"Sandbox";
         } else {
+            [self customNavigationBarPlus];
             self.title = self.fileInfo.displayName;
         }
     }
