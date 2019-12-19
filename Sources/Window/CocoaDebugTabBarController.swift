@@ -10,6 +10,8 @@ import UIKit
 
 class CocoaDebugTabBarController: UITabBarController {
 
+    var currentStatusBarStyle:UIStatusBarStyle = .default;
+    
     //MARK: - init
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +30,14 @@ class CocoaDebugTabBarController: UITabBarController {
         super.viewWillAppear(animated)
         
         CocoaDebugSettings.shared.visible = true
-        UIApplication.shared.statusBarStyle = .lightContent;
+        currentStatusBarStyle = UIApplication.shared.statusBarStyle
+        UIApplication.shared.statusBarStyle = .lightContent
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         CocoaDebugSettings.shared.visible = false
-        UIApplication.shared.statusBarStyle = .default;
+        UIApplication.shared.statusBarStyle = currentStatusBarStyle;
     }
     
     override func viewDidDisappear(_ animated: Bool) {
