@@ -6,6 +6,6 @@ target 'CocoaDebug' do
   use_frameworks!
 
   #pod 'CocoaDebug', :configurations => ['Debug']
-  pod 'CocoaDebug', :git => 'https://github.com/HiKarry/CocoaDebug.git', :tag => '2.0.2', :configurations => ['Debug']
+  pod 'CocoaDebug', :git => 'https://github.com/HiKarry/CocoaDebug.git', :tag => '2.0.3', :configurations => ['Debug']
 
 end
