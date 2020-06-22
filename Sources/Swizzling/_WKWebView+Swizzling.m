@@ -59,7 +59,7 @@
     //
     [configuration.userContentController removeAllUserScripts];
     
-    [self log:configuration];
+//    [self log:configuration];
     [self error:configuration];
     [self warn:configuration];
     [self debug:configuration];
