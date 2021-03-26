@@ -20,7 +20,10 @@
 #pragma mark - life
 + (void)load {
     
-    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"disableHTMLConsoleMonitoring_CocoaDebug"]) {
+//    BOOL disableHTMLConsoleMonitoring = [[NSUserDefaults standardUserDefaults] boolForKey:@"disableHTMLConsoleMonitoring_CocoaDebug"];
+    BOOL disableHTMLConsoleMonitoring = YES;
+    
+    if (!disableHTMLConsoleMonitoring) {
         
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
@@ -59,7 +62,7 @@
     //
     [configuration.userContentController removeAllUserScripts];
     
-//    [self log:configuration];
+    [self log:configuration];
     [self error:configuration];
     [self warn:configuration];
     [self debug:configuration];
