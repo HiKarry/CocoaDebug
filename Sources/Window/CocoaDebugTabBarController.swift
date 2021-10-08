@@ -24,6 +24,14 @@ class CocoaDebugTabBarController: UITabBarController {
         
         self.selectedIndex = CocoaDebugSettings.shared.tabBarSelectItem 
         self.tabBar.tintColor = Color.mainGreen
+        self.tabBar.backgroundColor = CocoaDebug.navigationColor.hexColor
+        
+        if #available(iOS 15.0, *) {
+            let barAppearance = UITabBarAppearance.init();
+            barAppearance.backgroundColor = CocoaDebug.navigationColor.hexColor
+            self.tabBar.scrollEdgeAppearance = barAppearance;
+            self.tabBar.standardAppearance = barAppearance;
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -75,7 +83,7 @@ class CocoaDebugTabBarController: UITabBarController {
         for vc in tabBarControllers {
             
             let nav = UINavigationController.init(rootViewController: vc)
-            nav.navigationBar.barTintColor = "#1f2124".hexColor
+            nav.navigationBar.barTintColor = CocoaDebug.navigationColor.hexColor
             
             //****** 以下代码从NavigationController.swift复制 ******
             nav.navigationBar.isTranslucent = false
@@ -84,6 +92,14 @@ class CocoaDebugTabBarController: UITabBarController {
             nav.navigationBar.titleTextAttributes = [.font: UIFont.boldSystemFont(ofSize: 20),
                                                      .foregroundColor: Color.mainGreen]
             
+            if #available(iOS 15.0, *) {
+                let barAppearance = UINavigationBarAppearance.init()
+                barAppearance.titleTextAttributes = nav.navigationBar.titleTextAttributes!
+                barAppearance.backgroundColor = nav.navigationBar.barTintColor
+                nav.navigationBar.scrollEdgeAppearance = barAppearance
+                nav.navigationBar.standardAppearance = barAppearance
+            }
+
             let selector = #selector(CocoaDebugNavigationController.exit)
             
             

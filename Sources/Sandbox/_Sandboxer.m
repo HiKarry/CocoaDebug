@@ -8,6 +8,7 @@
 
 #import "_Sandboxer.h"
 #import "_MLBDirectoryContentsTableViewController.h"
+//#import "Example_Objc-Swift.h"
 
 @interface _Sandboxer ()
 
@@ -71,7 +72,9 @@
         directoryContentsTableViewController.homeDirectory = YES;
         directoryContentsTableViewController.fileInfo = [[_MLBFileInfo alloc] initWithFileURL:self.homeFileURL];
         directoryContentsTableViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-        _homeDirectoryNavigationController = [[UINavigationController alloc] initWithRootViewController:directoryContentsTableViewController];
+        // FIXME: hack
+        NSString *className = [NSString stringWithFormat:@"%@.CocoaDebugNavigationController", [NSBundle bundleForClass:self.class].infoDictionary[@"CFBundleName"]];
+        _homeDirectoryNavigationController = [[NSClassFromString(className) alloc] initWithRootViewController:directoryContentsTableViewController];
     }
     
     return _homeDirectoryNavigationController;

@@ -18,6 +18,14 @@ class CocoaDebugNavigationController: UINavigationController {
         navigationBar.tintColor = Color.mainGreen
         navigationBar.titleTextAttributes = [.font: UIFont.boldSystemFont(ofSize: 20),
                                              .foregroundColor: Color.mainGreen]
+        
+        if #available(iOS 15.0, *) {
+            let barAppearance = UINavigationBarAppearance.init()
+            barAppearance.titleTextAttributes = navigationBar.titleTextAttributes!
+            barAppearance.backgroundColor = CocoaDebug.navigationColor.hexColor
+            navigationBar.scrollEdgeAppearance = barAppearance
+            navigationBar.standardAppearance = barAppearance
+        }
 
         let selector = #selector(CocoaDebugNavigationController.exit)
         

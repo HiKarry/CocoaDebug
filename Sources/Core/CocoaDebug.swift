@@ -26,6 +26,8 @@ import Foundation
     @objc public static var emailCcRecipients: [String]? = nil
     ///set the main color with hexadecimal format. default value is `#42d459`.
     @objc public static var mainColor: String = "#ffffff"
+    ///set the navigation backgroud color
+    @objc public static var navigationColor: String = "#1f2124"
     
     //MARK: - CocoaDebug enable
     @objc public static func enable() {
