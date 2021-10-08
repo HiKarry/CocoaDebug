@@ -21,7 +21,7 @@
 //        CocoaDebug.serverURL = @"google.com"; //default value is `nil`
 //        CocoaDebug.ignoredURLs = @[@"aaa.com", @"bbb.com"]; //default value is `nil`
 //        CocoaDebug.onlyURLs = @[@"ccc.com", @"ddd.com"]; //default value is `nil`
-//        CocoaDebug.tabBarControllers = @[[UIViewController new], [UIViewController new]]; //default value is `nil`
+//        CocoaDebug.tabBarControllers = @[[UIViewController new]]; //default value is `nil`
 //        CocoaDebug.logMaxCount = 1000; //default value is `500`
 //        CocoaDebug.emailToRecipients = @[@"aaa@gmail.com", @"bbb@gmail.com"]; //default value is `nil`
 //        CocoaDebug.emailCcRecipients = @[@"ccc@gmail.com", @"ddd@gmail.com"]; //default value is `nil`
